@@ -982,6 +982,20 @@ RedHat-based Linux with additional OpenStack repo:
             source: 'http://repos.fedorapeople.org/repos/openstack/openstack-icehouse/epel-6/'
             gpgcheck: 0
 
+RedHat-based Linux with Salt Project repo, pinned to version 3006:
+
+.. code-block:: yaml
+
+    linux:
+      system:
+        ...
+        repo:
+          saltproject:
+            enabled: true
+            gpgkey: https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public
+            source: https://packages.broadcom.com/artifactory/saltproject-rpm/
+            includepkgs: "*3006*"
+
 Ensure system repository to use czech Debian mirror (``default: true``)
 Also pin it's packages with priority ``900``:
 

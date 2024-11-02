@@ -206,6 +206,12 @@ linux_repo_{{ name }}:
           {%- if repo.gpgkey is defined %}
   - gpgkey: {{ repo.gpgkey }}
           {%- endif %}
+          {%- if repo.includepkgs is defined %}
+  - includepkgs: "{{ repo.includepkgs }}"
+          {%- endif %}
+          {%- if repo.exclude is defined %}
+  - exclude: "{{ repo.exclude }}"
+          {%- endif %}
         {%- endif %}
       {%- else %}
   pkgrepo.absent:

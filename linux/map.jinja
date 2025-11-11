@@ -116,8 +116,14 @@
     'bookworm': {
         'pkgs': ['python3-apt', 'apt-transport-https', 'libmnl0'],
     },
+    'trixie': {
+        'pkgs': ['python3-apt', 'libmnl0'],
+    },
+    'forky': {
+        'pkgs': ['python3-apt', 'libmnl0'],
+    },
     'sid': {
-        'pkgs': ['python3-apt', 'apt-transport-https', 'libmnl0'],
+        'pkgs': ['python3-apt', 'libmnl0'],
     },
     'jammy': {
         'pkgs': ['python3-apt', 'apt-transport-https', 'libmnl0'],
@@ -412,6 +418,12 @@ Debian:
         'lvm_services': ['lvm2-monitor'],
     },
     'bookworm': {
+        'lvm_services': ['lvm2-monitor'],
+    },
+    'trixie': {
+        'lvm_services': ['lvm2-monitor'],
+    },
+    'forky': {
         'lvm_services': ['lvm2-monitor'],
     },
     'sid': {
